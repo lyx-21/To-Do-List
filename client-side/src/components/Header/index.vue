@@ -45,7 +45,7 @@ export default {
           exact: false,
         },
         {
-          name: 'Blog',
+          name: 'Article',
           title: '文章',
           exact: true, // 激活状态是否要精确匹配
         },
@@ -60,7 +60,7 @@ export default {
           exact: true,
         },
         {
-          name: 'Project',
+          name: 'Item',
           title: '项目&效果',
           exact: true,
         },

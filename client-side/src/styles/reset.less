@@ -18,6 +18,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -26,8 +27,25 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -520;
+    pointer-events: none;
+}
+body::before {
+	// background: url(https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00553-1760.jpg);
+	// background: url(https://img1.baidu.com/it/u=342558571,2872407756&fm=26&fmt=auto&gp=0.jpg);
+	background: url(http://p3.qhimg.com/bdr/__85/t01948cd7cb2d71fb86.jpg);
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
 ol, ul {
 	list-style: none;
 }
@@ -50,4 +68,11 @@ a {
 	  color: @primary;
 	}
   }
+img {
+	border: 0;
+    vertical-align: middle;
+}
+svg, canvas {
+    vertical-align: middle;
+}
   

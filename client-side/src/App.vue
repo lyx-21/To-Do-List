@@ -5,7 +5,9 @@
         <el-header>
           <Header />
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <RouterView />
+        </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>
@@ -22,20 +24,21 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .el-header,
 .el-footer {
-  background-color: #fff;
   color: #303133;
   text-align: center;
   line-height: 60px;
 }
 
+.el-header {
+  background-color: #fff;
+}
 .el-main {
-  background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
+  line-height: 20px;
 }
 
 body > .el-container {
