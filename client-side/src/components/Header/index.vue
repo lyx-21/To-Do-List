@@ -2,8 +2,9 @@
   <div class="hearder-container">
     <el-row>
       <el-col :span="6">
-        <div class="hearder-content">
-          <i class="el-icon-switch-button"> TODOS </i>
+        <div class="hearder-content logo" @click="handleClick">
+          <div class="image"><img :src="ImageLogo"></div>
+          <div><i> Tree Hole </i></div>
         </div>
       </el-col>
       <el-col :span="12">
@@ -31,6 +32,7 @@
 
 <script>
 import SearchBox from './SearchBox.vue';
+import ImageLogo from '../../assets/logo.png';
 
 export default {
   components: {
@@ -38,11 +40,12 @@ export default {
   },
   data() {
     return {
+      ImageLogo,
       items: [
         {
           name: 'Home',
           title: '首页',
-          exact: false,
+          exact: true,
         },
         {
           name: 'Article',
@@ -72,23 +75,42 @@ export default {
       ],
     };
   },
+  methods: {
+    handleClick() {
+      this.$router.push({ name: 'Home' });
+    },
+  },
 };
 </script>
 
 <style lang="less" scoped>
 .hearder-container {
-  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  height: 60px;
+  transition: 0.5s;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  .image {
+    line-height: 52px;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
   i {
     font-size: 25px;
     font-weight: 800;
   }
 }
 .el-row {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   height: 100%;
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 .el-col {
   border-radius: 4px;
@@ -97,9 +119,13 @@ export default {
   display: flex;
   align-items: center;
   a {
-    //   &.selected {
-    //   color: #ff5268;
-    // }
+      &.selected {
+      color: #ff5268;
+      &::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
     &:hover {
       color: #ff5268;
     }

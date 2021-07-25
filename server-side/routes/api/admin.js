@@ -1,7 +1,6 @@
 const express = require("express");
 const { asyncHandler } = require("../getSendResult");
-const adminServ = require("../../Service/adminService");
-// const crypto = require("../../util/crypt");
+const adminServ = require("../../services/adminService");
 const router = express.Router();
 const jwt = require("../jwt");
 

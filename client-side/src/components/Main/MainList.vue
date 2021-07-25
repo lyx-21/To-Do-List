@@ -13,8 +13,8 @@
         :title="item.title"
       >
         <ImageLoader
-          :src="item.src"
-          :placeholder="item.placeholder"
+          :src="item.image.src"
+          :placeholder="item.image.placeholder"
           :duration="2000"
           class="image"
         />
@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import getBlogs from '../../api/blog';
 import ImageLoader from '../Universality/ImageLoader.vue';
 
 export default {
@@ -82,84 +83,17 @@ export default {
   },
   data() {
     return {
-      data: [
-        {
-          id: 1,
-          title: 'VMware虚拟机安装 Centos 8 系统教程',
-          description:
-            '前言本教程讲解VMware虚拟机安装Centoszuii作文需把看见你等你收到v开v哦ivi按阿萨峻奥i额外呢vi四v建立粽',
-          src: 'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@e7a07ba19907478887f2dd75dd711a16a8ee3ec7/2021/07/01/97899761361a645cf8bc5711fc44c39a.webp',
-          placeholder:
-            'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@e7a07ba19907478887f2dd75dd711a16a8ee3ec7/2021/07/01/97899761361a645cf8bc5711fc44c39a.webp',
-          category: {
-            id: 1,
-            name: '科技',
-            display: 'black',
-            isStrck: '置顶',
-          },
-          scanNumber: 10,
-          commentNumber: 30,
-          like: 21,
-          createDate: '2021年07月01日',
-        },
-        {
-          id: 2,
-          title: '我还是喜你',
-          description: '喜欢你这件事，我一直没变，还希望我们能够在一起',
-          src: 'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@8745542720266bd510bb490c5cab8c1135733bc7/2021/05/13/37c1a7623d4e16acc347790f47eb9eef.webp',
-          placeholder:
-            'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@8745542720266bd510bb490c5cab8c1135733bc7/2021/05/13/37c1a7623d4e16acc347790f47eb9eef.webp',
-          category: {
-            id: 2,
-            name: '随笔',
-            display: 'none',
-            isStrck: '',
-          },
-          scanNumber: 10,
-          commentNumber: 30,
-          like: 52,
-          createDate: '2021年07月19日',
-        },
-        {
-          id: 3,
-          title: 'VMware虚拟机安装 Centos 8 系统教程',
-          description:
-            '前言本教程讲解VMware虚拟机安装Centoszuii作文需把看见你等你收到v开v哦ivi按阿萨峻奥i额外呢vi四v建立粽',
-          src: 'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@e7a07ba19907478887f2dd75dd711a16a8ee3ec7/2021/07/01/97899761361a645cf8bc5711fc44c39a.webp',
-          placeholder:
-            'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@e7a07ba19907478887f2dd75dd711a16a8ee3ec7/2021/07/01/97899761361a645cf8bc5711fc44c39a.webp',
-          category: {
-            id: 3,
-            name: '科技',
-            display: 'none',
-            isStrck: '',
-          },
-          scanNumber: 10,
-          commentNumber: 30,
-          like: 21,
-          createDate: '2021年07月01日',
-        },
-        {
-          id: 4,
-          title: '我还是喜你',
-          description: '喜欢你这件事，我一直没变，还希望我们能够在一起',
-          src: 'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@8745542720266bd510bb490c5cab8c1135733bc7/2021/05/13/37c1a7623d4e16acc347790f47eb9eef.webp',
-          placeholder:
-            'https://cdn.jsdelivr.net/gh/s-Ruthless/moeor_img@8745542720266bd510bb490c5cab8c1135733bc7/2021/05/13/37c1a7623d4e16acc347790f47eb9eef.webp',
-          category: {
-            id: 4,
-            name: '随笔',
-            display: 'none',
-            isStrck: '',
-          },
-          scanNumber: 10,
-          commentNumber: 30,
-          like: 52,
-          createDate: '2021年07月19日',
-        },
-      ],
+      data: [],
     };
   },
+  async created() {
+    this.data = await getBlogs.getBlogs(1, 8, 2);
+  },
+  // methods: {
+  //   async function() {
+  //     this.data += await getBlogs.getBlogs(2,8,3);
+  //   }
+  // }
 };
 </script>
 

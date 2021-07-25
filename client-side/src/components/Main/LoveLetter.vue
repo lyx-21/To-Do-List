@@ -1,52 +1,13 @@
 <template>
-  <div class="loveletter-container" style="top: 60px">
+  <div class="loveletter-container">
     <div class="item-title">
-      <svg
-        t="1626528443732"
-        class="icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="1515"
-        width="40"
-        height="40"
-      >
-        <path
-          d="M335.7 3.5c19.7-4.6 121.4 191.7 121.4 265.3 0 0 74.2-18.1 124 0 0 0 56.8-251.4
-          106.1-264 35.7-9.1115.7 77.5 189.9 264 28.2 70.9 35.6 186.8 64.9 275.1 96.7
-          291.4-37.7 480.1-439.3 480.1S-15.6 768.3 88.5
-          528.3c40.8-94.1 47.3-196.4 78.5-285.5 43.9-126 111.1-225.7 168.7-239.3z"
-          fill="#1B76FF"
-          p-id="1516"
-        ></path>
-        <path
-          d="M263.7 565s-27-100.7 31.6-160.8c39.6-40.7 128.1-32.7 159.8 3.1
-          41.2 46.6 35.7 112.5 35.7
-          112.5h41.7s-10.4-59.6 45.5-112.5c40-37.9 138.9-41.9 178.8 33.3 30.7 57.8 2.9 124.4
-          2.9 124.4l136.6
-          197s-58.5 173.1-377.7 173.1-390.4-171.2-390.4-171.2L263.7 565z"
-          fill="#FFFFFF"
-          p-id="1517"
-        ></path>
-        <path
-          d="M361.8 645.7h15.7c13.5 0 24.5-11 24.5-24.5v-89.7c0-13.5-11-24.
-          5-24.5-24.5h-15.7c-13.5 0-24.5
-          11-24.5 24.5v89.7c0 13.6 11 24.5 24.5 24.5zM653.7 645.7h15.7c13.5
-          0 24.5-11 24.5-24.5v-89.7c0-13.
-          5-11-24.5-24.5-24.5h-15.7c-13.5 0-24.5 11-24.5 24.5v89.7c0.1 13.6
-          11 24.5 24.5 24.5zM482.3 710.9c4.3
-          0.4 42.5-1 50.7 0 8.2 1 48.8 10.2 32.3 46-15.3 33.1-44.6 36.6-52.8
-          36.6-8.2 0-38.2-4.7-53.6-39.1-15.3-34.4 23.4-43.5 23.4-43.5z"
-          fill="#1B76FF"
-          p-id="1518"
-        ></path>
-      </svg>
       <span class="text">舔狗日记</span>
       <span class="line"></span>
     </div>
     <div class="item-content">
       <div class="content" :class="`${this.loveletter.type}`">
-        {{ loveletter.contentup }}<mark>{{ loveletter.mark }}</mark>{{ loveletter.contentdown }}
+        {{ loveletter.contentup }}<mark>{{ loveletter.mark }}</mark
+        >{{ loveletter.contentdown }}
       </div>
       <div class="change" @click="handleClick">
         <svg
@@ -108,7 +69,8 @@ export default {
         id: 1,
         contentup: '晚上和你聊天，10点钟不到，你就说“',
         mark: '困了，去睡觉了',
-        contentdown: '”。现在凌晨1点钟，看到你给他的朋友圈点赞评论，约他明天去吃火锅，一定是你微信被盗了吧。',
+        contentdown:
+          '”。现在凌晨1点钟，看到你给他的朋友圈点赞评论，约他明天去吃火锅，一定是你微信被盗了吧。',
         type: 'type1',
       },
     };
@@ -128,6 +90,7 @@ export default {
 .loveletter-container {
   background: rgba(255, 255, 255, 0.85);
   position: sticky;
+  top: 120px;
   width: 250px;
   border-radius: 8px;
   box-shadow: 0 0 20px -5px rgba(158, 158, 158, 0.22);

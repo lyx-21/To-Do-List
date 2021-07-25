@@ -1,43 +1,23 @@
 <template>
-  <div class="homemain-container">
-    <div class="main-index">
-      <div class="main-title">
-        <ul class="title-title">
-          <li class="item active" data-type="created">最新文章</li>
-          <li class="item" data-type="views">热门文章</li>
-          <li class="item" data-type="commentsNum">评论最多</li>
-          <li class="item" data-type="agree">点赞最多</li>
-          <li class="line" style="left: 0px; width: 56px"></li>
-        </ul>
-        <div class="title-notice">
-          <a
-            href="http://www.wenming.cn/specials/100/"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >热烈庆祝中国共产党成立一百周年！</a
-          >
-        </div>
-      </div>
+  <div class="mainLayout-container">
+    <div class="main-detail">
+      <div class="main-title"></div>
+
       <div class="main-list">
-        <MainList />
+
       </div>
     </div>
-    <div class="main-load">查看更多</div>
   </div>
 </template>
 
 <script>
-import MainList from './MainList.vue';
 
 export default {
-  components: {
-    MainList,
-  },
 };
 </script>
 
 <style lang="less" scoped>
-.homemain-container {
+.mainLayout-container {
   min-width: 0;
   flex: 1;
   padding-bottom: 15px;
@@ -67,7 +47,7 @@ export default {
       transition: color 0.35s;
     }
     .active {
-      color: #ff5268;
+      color: var(--theme);
     }
   }
   .title-notice {

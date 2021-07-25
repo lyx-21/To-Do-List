@@ -1,4 +1,5 @@
 import Home from '../views/Home/index.vue';
+import Login from '../views/Login/index.vue';
 
 export default [
   {
@@ -35,5 +36,12 @@ export default [
     path: '/message',
     name: 'Message',
     component: () => import('../views/Message/index.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    components: {
+      login: Login,
+    },
   },
 ];
