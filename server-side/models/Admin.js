@@ -1,7 +1,7 @@
 const sequelize = require("./db");
 const { DataTypes } = require("sequelize");
 
-// 创建一个模型对象
+// 创建一个用户模型对象
 const Admin = sequelize.define(
     "Admin", 
     {

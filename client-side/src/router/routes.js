@@ -10,6 +10,7 @@ export default [
   {
     path: '/blogbetail/:id',
     name: 'BlogDetail',
+    meta: { requiresLogin: true },
     component: () => import('../views/Home/Detail.vue'),
   },
   {
@@ -30,6 +31,7 @@ export default [
   {
     path: '/item',
     name: 'Item',
+    meta: { requiresLogin: true },
     component: () => import('../views/Item/index.vue'),
   },
   {

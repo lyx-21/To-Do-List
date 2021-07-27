@@ -3,14 +3,14 @@
     <div class="detail">
       <h1 class="detail-title">关于</h1>
       <div class="detail-count">
-        <div class="joe_detail__count-information">
+        <div>
           <img
             width="35"
             height="35"
-            class="avatar ls-is-cached lazyloaded"
+            class="avatar"
             src="https://thirdqq.qlogo.cn/g?b=qq&amp;nk=2502393029&amp;s=100"
             data-src="https://thirdqq.qlogo.cn/g?b=qq&amp;nk=2502393029&amp;s=100"
-            alt="梦繁星"
+            alt="林与萱"
           />
           <div class="meta">
             <div class="author">
@@ -46,7 +46,7 @@
             alt="表情"
           />
         </h2>
-        <p>来自：河南驻马店<br />现居：上海浦东</p>
+        <p>来自：安徽铜陵<br />现居：安徽铜陵</p>
         <p>卑微实习狗</p>
         <p>
           喜欢听歌，但是不会唱<br />喜欢游戏，但是我很菜<br />偶尔看看玄幻小说，幻想自己能修仙...emm
@@ -82,25 +82,6 @@
             alt="表情"
           />
         </h2>
-        <p><strong>域名由来：</strong>你猜!</p>
-        <p><strong>博客名称：</strong>不告诉你！</p>
-        <p><strong>博客内容：</strong>瞎写的！</p>
-        <h2>
-          免责申明
-          <img
-            class="owo_image ls-is-cached lazyloaded"
-            src="https://www.moeor.com/usr/themes/Joe/assets/owo/aru/E4B8ADE68C87_2x.png"
-            data-src="https://www.moeor.com/usr/themes/Joe/assets/owo/aru/E4B8ADE68C87_2x.png"
-            alt="表情"
-          />
-        </h2>
-        <p>
-          <strong
-            >本站除却特殊版权说明外的文字、图片、音频或视频来源于网络，如有侵权，请联系网站管理员整改。</strong
-          ><br /><strong
-            >以任意形式访问本站，直接或间接使用本站内容者，一律视为自愿接受本站声明。</strong
-          >
-        </p>
       </article>
     </div>
   </div>

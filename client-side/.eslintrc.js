@@ -15,5 +15,6 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-unresolved': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-alert': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-unused-expressions': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
 };
